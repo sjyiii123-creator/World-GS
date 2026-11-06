@@ -1,0 +1,97 @@
+{
+  "model": "b4",
+  "n_pairs": 267,
+  "n_skipped": 0,
+  "code_sha256": "bac3af963920e8ba3b1d271d45291e588519425776b59418d59ce98f1f2c86a5",
+  "control_script_sha256": "7ad7c4a3a38a3049ca0f9f9897cbbb1e636eea4bde58b47172cd4e0168bb3ada",
+  "checkpoint": "/home/moz/World-GS/runs/j2_2_experimental/b4_residual_expanded.pt",
+  "checkpoint_sha256": "743b82eece760598b1d715022b482bfd4ab9e82d16f389768c557c3bf9a4da0d",
+  "samples_csv": "/home/moz/World-GS/datasets/processed/actor_sequences/samples.csv",
+  "samples_sha256": "71137f2370cc89290902f0d9179af6db82d154785600d9bf261c5226427a3714",
+  "split_policy": {
+    "included": [
+      "train",
+      "val"
+    ],
+    "test_excluded": true,
+    "stride": 20,
+    "eligible_pairs": 5322
+  },
+  "metrics": {
+    "D_pred_varied": {
+      "median": 0.00486415,
+      "cluster_bootstrap_median_ci95": [
+        0.00471203,
+        0.00501702
+      ]
+    },
+    "D_pred_zero_delta": {
+      "median": 0.0,
+      "cluster_bootstrap_median_ci95": [
+        0.0,
+        0.0
+      ]
+    },
+    "D_pred_shuffled_delta": {
+      "median": 0.02129591,
+      "cluster_bootstrap_median_ci95": [
+        0.01975402,
+        0.02255124
+      ]
+    },
+    "D_true_original": {
+      "median": 0.35004686,
+      "cluster_bootstrap_median_ci95": [
+        0.33393085,
+        0.36837215
+      ]
+    },
+    "D_true_stable": {
+      "median": 0.34683041,
+      "cluster_bootstrap_median_ci95": [
+        0.32590776,
+        0.37190513
+      ]
+    },
+    "D_true_jitter": {
+      "median": 0.39124041,
+      "cluster_bootstrap_median_ci95": [
+        0.369815235,
+        0.41850459
+      ]
+    },
+    "R_delta_original": {
+      "median": 0.0137567,
+      "cluster_bootstrap_median_ci95": [
+        0.01305855,
+        0.01480367
+      ]
+    },
+    "delta_vs_zero_ratio": {
+      "median": 486414.66302125,
+      "cluster_bootstrap_median_ci95": [
+        471202.93381775,
+        501701.7812708
+      ]
+    },
+    "target_stable_ratio": {
+      "median": 0.98672958,
+      "cluster_bootstrap_median_ci95": [
+        0.97947615,
+        0.99062828
+      ]
+    },
+    "target_jitter_ratio": {
+      "median": 1.09367854,
+      "cluster_bootstrap_median_ci95": [
+        1.07430927,
+        1.10859211
+      ]
+    }
+  },
+  "interpretation_limits": [
+    "delta_vs_zero_ratio and shuffled-delta controls measure sensitivity to the time argument and its order, not event information retention.",
+    "stable/jitter controls measure target-feature crop sensitivity only.",
+    "No STOPPED/RESUMING event conclusion without human-aligned windows."
+  ]
+}

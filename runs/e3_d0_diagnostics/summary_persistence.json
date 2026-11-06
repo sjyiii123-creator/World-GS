@@ -1,0 +1,38 @@
+{
+  "n_pairs": 792,
+  "delta_dir": {
+    "mean": 0.14839394413160556,
+    "median": 0.12701842188835144,
+    "q1": 0.09073357284069061,
+    "q3": 0.18340209126472473,
+    "bootstrap_median_ci95": [
+      0.12248224020004272,
+      0.13420197367668152
+    ]
+  },
+  "R_delta": {
+    "mean": 0.0,
+    "median": 0.0,
+    "q1": 0.0,
+    "q3": 0.0,
+    "bootstrap_median_ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  "evidence_rule": {
+    "delta_dir_positive_ci": true,
+    "R_delta_below_bar_ci": true,
+    "R_delta_bar": 0.5,
+    "verdict": "temporal_oversmoothing_supported",
+    "note": "pre-registered before any run (docs/e3_event_state_jepa_plan.md \u00a72)"
+  },
+  "protocol": "384-d pooled DINOv2 features, deterministic predictors; NOT comparable to WA-JEPA's spatial-token protocol",
+  "model": "persistence",
+  "description": "repeat last history frame (lower bound reference)",
+  "code_sha256": "ce9acd69db44befe91744fb4663d3a63b418fdd75b80f6697b496068ee1cc24f",
+  "samples_csv": "/home/moz/World-GS/datasets/processed/actor_sequences/samples.csv",
+  "n_pairs_evaluated": 792,
+  "n_pairs_skipped": 0,
+  "future_window_note": "cand_frames window [gap, gap+12) frames; narrow (~0.5-0.9 s) but >= 2 timesteps"
+}

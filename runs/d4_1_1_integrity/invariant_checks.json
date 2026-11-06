@@ -1,0 +1,42 @@
+[
+  {
+    "name": "I1_one_top1_decision_per_anchor",
+    "status": "PASS",
+    "detail": "7 methods x 412 anchors, decision keys == group keys"
+  },
+  {
+    "name": "I2_source_correct_le_anchors",
+    "status": "PASS",
+    "detail": "78 (split, source) rows, all 7 methods checked"
+  },
+  {
+    "name": "I3_split_correct_le_anchors",
+    "status": "PASS",
+    "detail": "all splits x 7 methods checked"
+  },
+  {
+    "name": "I4_row_order_invariance",
+    "status": "PASS",
+    "detail": "pipeline re-run on reversed candidate list; all 7 methods' decisions identical"
+  },
+  {
+    "name": "I5_no_duplicate_candidate_keys",
+    "status": "PASS",
+    "detail": "conflicting=0; identical rows collapsed=0"
+  },
+  {
+    "name": "I6_nonfinite_disqualified",
+    "status": "PASS",
+    "detail": "data rows with non-finite cells: 0; no non-finite decision beat a finite candidate"
+  },
+  {
+    "name": "I7_method_provenance_argmax",
+    "status": "PASS",
+    "detail": "every decision re-verified as the argmax of its own method score"
+  },
+  {
+    "name": "I8_consistent_candidate_sets",
+    "status": "PASS",
+    "detail": "n_candidates per anchor identical across all 7 methods (412 anchors)"
+  }
+]

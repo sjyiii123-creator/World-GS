@@ -1,0 +1,13 @@
+started 2026-11-06T17:06:30 run_id=472f55797fc5 code=17de51c1af5a input=62af9a11a2a8 config=8f394ea6393e csv=/home/moz/World-GS/runs/d4_1_reevaluation/audit_candidates.csv reference_check=on
+loaded 3513 rows -> 3513 unique candidates, 412 anchors; duplicates: conflicting=0 identical_collapsed=0; non-finite rows=0
+invariant I1_one_top1_decision_per_anchor: PASS — 7 methods x 412 anchors, decision keys == group keys
+invariant I2_source_correct_le_anchors: PASS — 78 (split, source) rows, all 7 methods checked
+invariant I3_split_correct_le_anchors: PASS — all splits x 7 methods checked
+invariant I4_row_order_invariance: PASS — pipeline re-run on reversed candidate list; all 7 methods' decisions identical
+invariant I5_no_duplicate_candidate_keys: PASS — conflicting=0; identical rows collapsed=0
+invariant I6_nonfinite_disqualified: PASS — data rows with non-finite cells: 0; no non-finite decision beat a finite candidate
+invariant I7_method_provenance_argmax: PASS — every decision re-verified as the argmax of its own method score
+invariant I8_consistent_candidate_sets: PASS — n_candidates per anchor identical across all 7 methods (412 anchors)
+reference regression: PASS (18/18 checks pass)
+published formal outputs atomically: seven_method_results.json, per_anchor_predictions.csv, per_source_results.csv, loso_relative_gains.json, risk_coverage.json, invariant_checks.json, reference_check.json
+RESULT: PASS

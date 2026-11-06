@@ -1,0 +1,23 @@
+started 2026-11-06T17:45:06 code=3d9be6d45354
+tracks_root=/home/moz/World-GS/runs/synpedas_smoke_v2 config={"gap_tolerance": 4, "n_move": 5, "n_stop": 5, "observation_level": "image_plane", "phase_semantics": {"CROSSING": "IMAGE_PLANE_MOVING (not verified road crossing)", "RESUMING": "image-plane motion resumes after STOPPED", "STOPPED": "image-plane stationary after earlier image-plane motion", "UNKNOWN": "insufficient or interrupted image-plane evidence", "WAITING": "image-plane stationary since first usable observation"}, "reestablish": 3, "resume_window": 6, "smooth_window": 3, "smoothing_temporal_scope": "centered_offline_noncausal", "v_move": 0.003, "v_stop": 0.0015, "warmup": 3}
+video_0002_0_2_6b_f60-210__gen: person tracks analyzed
+video_0002_0_2_6b_f60-210__real: person tracks analyzed
+video_0003_0_3_7b_f0-150__gen: person tracks analyzed
+video_0003_0_3_7b_f0-150__real: person tracks analyzed
+video_0016_0_16_72b_f0-150__gen: person tracks analyzed
+video_0016_0_16_72b_f0-150__real: person tracks analyzed
+video_0020_0_20_86b_f381-531__gen: person tracks analyzed
+video_0020_0_20_86b_f381-531__real: person tracks analyzed
+video_0024_0_24_99b_f60-210__gen: person tracks analyzed
+video_0024_0_24_99b_f60-210__real: person tracks analyzed
+video_0027_0_27_119b_f0-150__gen: person tracks analyzed
+video_0027_0_27_119b_f0-150__real: person tracks analyzed
+video_0030_0_30_134b_f0-150__gen: person tracks analyzed
+video_0030_0_30_134b_f0-150__real: person tracks analyzed
+video_0035_0_35_163b_f0-150__gen: person tracks analyzed
+video_0035_0_35_163b_f0-150__real: person tracks analyzed
+video_0037_0_37_168b_f0-150__gen: person tracks analyzed
+video_0037_0_37_168b_f0-150__real: person tracks analyzed
+video_0044_0_44_202b_f60-210__gen: person tracks analyzed
+video_0044_0_44_202b_f60-210__real: person tracks analyzed
+finished: videos=20 person_tracks=87 per_frame_rows=5156

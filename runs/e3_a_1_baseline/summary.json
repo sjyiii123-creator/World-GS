@@ -1,0 +1,39 @@
+{
+  "code_sha256": "3d9be6d4535436e9ba7d93a898e98afc5a4d993e0211e6a66e7e4305f02b782d",
+  "tracks_root": "/home/moz/World-GS/runs/synpedas_smoke_v2",
+  "generated_at": "2026-11-06T17:45:06",
+  "config": {
+    "v_stop": 0.0015,
+    "v_move": 0.003,
+    "n_stop": 5,
+    "n_move": 5,
+    "warmup": 3,
+    "gap_tolerance": 4,
+    "reestablish": 3,
+    "resume_window": 6,
+    "smooth_window": 3,
+    "smoothing_temporal_scope": "centered_offline_noncausal",
+    "observation_level": "image_plane",
+    "phase_semantics": {
+      "UNKNOWN": "insufficient or interrupted image-plane evidence",
+      "WAITING": "image-plane stationary since first usable observation",
+      "CROSSING": "IMAGE_PLANE_MOVING (not verified road crossing)",
+      "STOPPED": "image-plane stationary after earlier image-plane motion",
+      "RESUMING": "image-plane motion resumes after STOPPED"
+    }
+  },
+  "n_videos": 20,
+  "n_tracks_total": 460,
+  "n_person_tracks": 87,
+  "n_person_tracks_used": 87,
+  "n_per_frame_rows": 5156,
+  "states": [
+    "UNKNOWN",
+    "WAITING",
+    "CROSSING",
+    "STOPPED",
+    "RESUMING"
+  ],
+  "declaration": "image-plane observation-level event evidence only; ego-motion / camera-geometry NOT compensated",
+  "label_acceptance": "research conclusions gated on e1_manual_labels.csv human ground truth (currently pending)"
+}

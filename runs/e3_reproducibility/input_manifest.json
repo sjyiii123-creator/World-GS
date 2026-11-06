@@ -1,0 +1,1399 @@
+{
+  "generated_at": "2026-11-06T18:27:43",
+  "scope": "E3-D0 v2, E3-D0.1 and E3-A.1 follow-up",
+  "split_policy": "D0 follow-ups use train,val only; split=test excluded by default",
+  "raw_media_included": false,
+  "model_weights_included": false,
+  "feature_cache_included": false,
+  "note": "The follow-up ZIP permits independent recomputation from result CSVs and track observations. Full DINO/video inference additionally requires the exact raw media, checkpoints and cache indexed here.",
+  "environment": {
+    "python_wm_eval": "3.9.23",
+    "torch": "2.7.1+cu128",
+    "ultralytics": "8.4.202",
+    "platform": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39"
+  },
+  "code": [
+    {
+      "path": "src/e3_d0_temporal_diagnostics.py",
+      "exists": true,
+      "bytes": 17901,
+      "sha256": "bac3af963920e8ba3b1d271d45291e588519425776b59418d59ce98f1f2c86a5",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "src/run_e3_d0_1_controls.py",
+      "exists": true,
+      "bytes": 11927,
+      "sha256": "7ad7c4a3a38a3049ca0f9f9897cbbb1e636eea4bde58b47172cd4e0168bb3ada",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "src/e3_a_event_state_baseline.py",
+      "exists": true,
+      "bytes": 14630,
+      "sha256": "3d9be6d4535436e9ba7d93a898e98afc5a4d993e0211e6a66e7e4305f02b782d",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "src/selftest_e3_stage.py",
+      "exists": true,
+      "bytes": 13834,
+      "sha256": "d85083fe24b65607514fc0f2801e6526e840a0af43266e9e8b75ab1774b677fc",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "src/build_e3_a_1_review.py",
+      "exists": true,
+      "bytes": 4399,
+      "sha256": "3b9b62df281823a3c14c7dce48a0ed7eb691b07937ecf20d00e781a9a0b340d1",
+      "included_in_e3_followup_zip": true
+    }
+  ],
+  "tabular_inputs": [
+    {
+      "path": "datasets/processed/actor_sequences/samples.csv",
+      "exists": true,
+      "bytes": 16802965,
+      "sha256": "71137f2370cc89290902f0d9179af6db82d154785600d9bf261c5226427a3714",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0002_0_2_6b_f60-210__gen/tracks.json",
+      "exists": true,
+      "bytes": 45130,
+      "sha256": "7af7b63eb2ee4086f8b652263cf955dc163bcb394f509b3af5a7794df8c0190b",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0002_0_2_6b_f60-210__real/tracks.json",
+      "exists": true,
+      "bytes": 76196,
+      "sha256": "9a307b05f06a6b82d29a4eb92b80a411f13e4db4ee8fb206cc00242a22998edb",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0003_0_3_7b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 101402,
+      "sha256": "c3184e5ff14d86f5843fc76fe0b5940ceb90ce916d76056edd5a15906c7b2902",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0003_0_3_7b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 173044,
+      "sha256": "8a252d540fc921bdc288841d62939446b66c44fe66346635587e3eea4a6d1204",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0016_0_16_72b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 104161,
+      "sha256": "dc269a5bd76ed5f3945737af23a965a2e4244090a86902897d32288ee11acd45",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0016_0_16_72b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 199310,
+      "sha256": "5ce6f52c94211b054d1e6faeae3fd0744b633a30039844cb11ba58f6a1a216aa",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0020_0_20_86b_f381-531__gen/tracks.json",
+      "exists": true,
+      "bytes": 69762,
+      "sha256": "f80408255820eba2a6012b7e1edcecbc35fd8b8408afb8480ced9bfda493eb2e",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0020_0_20_86b_f381-531__real/tracks.json",
+      "exists": true,
+      "bytes": 130093,
+      "sha256": "4637550f8a6ad7ccd24aece152918486053450d9dc0f01be8964f2782a30407c",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0024_0_24_99b_f60-210__gen/tracks.json",
+      "exists": true,
+      "bytes": 6953,
+      "sha256": "86ab28ce47ed327e7c06fc03a3f19764a88cdc29b575c397cd18e62b7d2095a5",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0024_0_24_99b_f60-210__real/tracks.json",
+      "exists": true,
+      "bytes": 28660,
+      "sha256": "3dccd02688c96179e448014d3de6c9e6147beacc2e61cdc3900de76201f794f1",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0027_0_27_119b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 105757,
+      "sha256": "1e1d57fee28dd326e3c942bdc62606b515cd7320fde534222c4028f3e93c7db8",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0027_0_27_119b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 168027,
+      "sha256": "e363a43421a39f90ebf565bdb26b0f84976dbfee545cac62bc4d23989e5bd250",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0030_0_30_134b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 54881,
+      "sha256": "6b5830867b4f2e87aea229285b1499fbab67892c3b7166e8e552d2f262bbb011",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0030_0_30_134b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 87136,
+      "sha256": "c91b4faae511b44baa4d6d98eee1829ddc7e346c213bf6fe4a8ba24f76ccc467",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0035_0_35_163b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 96494,
+      "sha256": "ee2f7eab15285d9f8cc8d08cc9aae3eedf675d3fc4c044f5c74ae6b6d5bb4d12",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0035_0_35_163b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 148752,
+      "sha256": "40e32258774b1d49b084cd78fe7fd5b91d6b2f724536665981b5b058e149cd35",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0037_0_37_168b_f0-150__gen/tracks.json",
+      "exists": true,
+      "bytes": 70833,
+      "sha256": "05bfd5622c107cead202e9418973957f4a5fabcb623dc12468633643ce34ebda",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0037_0_37_168b_f0-150__real/tracks.json",
+      "exists": true,
+      "bytes": 207461,
+      "sha256": "c125f634b8ca1d46cca0c7126406c2b112368c050024a9ac051368369d415abc",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0044_0_44_202b_f60-210__gen/tracks.json",
+      "exists": true,
+      "bytes": 14868,
+      "sha256": "a7699acf19775fd1366db2a1f3078c7341d607eb41bc4a88af2d3e9dc95c4bbc",
+      "included_in_e3_followup_zip": true
+    },
+    {
+      "path": "runs/synpedas_smoke_v2/video_0044_0_44_202b_f60-210__real/tracks.json",
+      "exists": true,
+      "bytes": 25248,
+      "sha256": "d6f8305dea4b55eb1e722eecfd460bbb5e49837a7d63269cdcbf19af43ce2333",
+      "included_in_e3_followup_zip": true
+    }
+  ],
+  "checkpoints": [
+    {
+      "path": "runs/d4_experimental/d4_lam0.5.pt",
+      "exists": true,
+      "bytes": 992237,
+      "sha256": "fd12f1d27fd2901e909662f83e0bd7df0a187b55e442a2bf1970465d74a6f784",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "runs/j2_2_experimental/b4_residual_expanded.pt",
+      "exists": true,
+      "bytes": 991830,
+      "sha256": "743b82eece760598b1d715022b482bfd4ab9e82d16f389768c557c3bf9a4da0d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "ckpt/dinov2-small/model.safetensors",
+      "exists": true,
+      "bytes": 88249960,
+      "sha256": "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "ckpt/dinov2-small/config.json",
+      "exists": true,
+      "bytes": 547,
+      "sha256": "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "ckpt/dinov2-small/preprocessor_config.json",
+      "exists": true,
+      "bytes": 436,
+      "sha256": "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "ckpt/yolov10x.pt",
+      "exists": true,
+      "bytes": 128288859,
+      "sha256": "6e6eae65e6c268c49a25849922e0c75a5c707d626d67170d16a97813b0f8eb79",
+      "included_in_e3_followup_zip": false
+    }
+  ],
+  "feature_cache": [
+    {
+      "path": "runs/j1_baseline/feature_cache/features.npz",
+      "exists": true,
+      "bytes": 97162244,
+      "sha256": "6f9173344cab554af47aeb7f3a99cc56e5c73a1201e6102770acb3aed5103012",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "runs/j1_baseline/feature_cache/meta.json",
+      "exists": true,
+      "bytes": 198,
+      "sha256": "0fd8aacdfb6a2e81eb4103b062def53fb74bf07e5e8ceb85146878aa349fcee9",
+      "included_in_e3_followup_zip": false
+    }
+  ],
+  "raw_media_index": [
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0002_0_2_6b_f60-210.mp4",
+      "exists": true,
+      "bytes": 2885604,
+      "sha256": "7833cb3c04654b4c26c71874a667ddefb987174271eb5e0a9da627aff88d0692",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0003_0_3_7b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2907238,
+      "sha256": "25898d0f4aea8927b08c5f3ab3dad87686c6d8397d4fefede3ae61480c4ea0c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0020_0_20_86b_f381-531.mp4",
+      "exists": true,
+      "bytes": 2529697,
+      "sha256": "aa496b4f53f7514c58553cba9dbd5e62ce8abef05d4bd546cf528e3441cac16a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0024_0_24_99b_f60-210.mp4",
+      "exists": true,
+      "bytes": 3215804,
+      "sha256": "56fabaabe58eb888f77cde615d7f073e392d5e1e0e20656581b96c520af61c91",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0027_0_27_119b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2414866,
+      "sha256": "c715b69e13f8c34060270d5b7224fbb894b7c40e521d6c2f633b4a8312e311a9",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0030_0_30_134b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4392254,
+      "sha256": "52652e7b09094f4f6bcf4c996658c1502f463e7fac012df8a6676700820ed631",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0035_0_35_163b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5022406,
+      "sha256": "a0a9237a2b51a8813d150d8d3aa3845b313d1727e7eedceb771631f8ecb1e37d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0037_0_37_168b_f0-150.mp4",
+      "exists": true,
+      "bytes": 6654595,
+      "sha256": "be5a99744cdd8ef8b6f65347527762bbbe55e2e98b68ab2e2a38e1312e3383d0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0044_0_44_202b_f60-210.mp4",
+      "exists": true,
+      "bytes": 1679422,
+      "sha256": "d605fb7330d24c350d88882b054e86c83955fdb7636e3d77a5c4d4537ff52840",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0047_0_47_214b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2660758,
+      "sha256": "ffb113f36d111006d68f263e990c7add36637b50d74bd8a188d39c8b45b5d82b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0060_0_60_266b_f60-210.mp4",
+      "exists": true,
+      "bytes": 1573730,
+      "sha256": "4e88f5ad7186f73bb48ea2555dd32d8cec66d0c01f389846a2445bb18fa0bb9c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0061_0_61_271b_f30-180.mp4",
+      "exists": true,
+      "bytes": 1793831,
+      "sha256": "169c435d469b0502f76a623419e0292cfa8b9f81e69bd6c31478f969eb87e31c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0063_0_63_292b_f30-180.mp4",
+      "exists": true,
+      "bytes": 2388386,
+      "sha256": "727b14c79a2a8c509daf86c7022cedcd8b0420dacd1801836f0c856a41c6708c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0064_0_64_298b_f92-242.mp4",
+      "exists": true,
+      "bytes": 1747761,
+      "sha256": "28e126f8f4d40341022a8613188d3265cbf2188921e08e8ec8b379fe8c3fc72c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0067_0_67_311b_f90-240.mp4",
+      "exists": true,
+      "bytes": 1301631,
+      "sha256": "df89f913d4d0248dbd2cf582b12322ae79aa4a3e1cab0d0a5d98d4833b0396c9",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0070_0_70_355b_f30-180.mp4",
+      "exists": true,
+      "bytes": 2371570,
+      "sha256": "ac3152b5b31b07a827bfd0f003467ef31fcef3ec8b9ebc1ad3f44b5ff4b10f8e",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0072_0_72_378b_f60-210.mp4",
+      "exists": true,
+      "bytes": 6153463,
+      "sha256": "71431b58f18b354290d1f34d3dea85c998cd390d6dcf68c39b19523df0df2dfd",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0077_0_77_405b_f30-180.mp4",
+      "exists": true,
+      "bytes": 3738004,
+      "sha256": "2bb85585c2b913dfd098ac01cc0962bcc94c4563454a201311d28a0ba78198d5",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0079_0_79_418b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4603912,
+      "sha256": "4d91489aa99383c3e5e1fd36c12ab70c99143551061f9901eb03e43c0e77ba90",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0080_0_80_428b_f62-212.mp4",
+      "exists": true,
+      "bytes": 3356362,
+      "sha256": "ac702ba86f2c33136608e7ddd00f5b25aaa8a61313d3ece5cbf8df1b08289cd8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0081_0_81_430b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8445320,
+      "sha256": "121a0d6e901d950fa9c3d4fea9328981566ca971c37543daef1a87d907c89198",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0082_0_82_436b_f30-180.mp4",
+      "exists": true,
+      "bytes": 7121274,
+      "sha256": "8fc96ecb3ef051cda14842671daee9e5aba0cb2b5519f6884f52d75260b19992",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0085_0_85_460b_f120-270.mp4",
+      "exists": true,
+      "bytes": 2938802,
+      "sha256": "34220dbde631e3b292033f5b9ee3729eb26f8693faaaaa53f64f43a842ccdd05",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0086_0_86_461b_f30-180.mp4",
+      "exists": true,
+      "bytes": 8988321,
+      "sha256": "48a95468e7902efe8a8fd84453fce5c7448f0cfa7087b3819a37e76d26e3a26f",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0088_0_88_487b_f90-240.mp4",
+      "exists": true,
+      "bytes": 3236088,
+      "sha256": "68da645a80be214b5725576a5ac47df2e10d1270ec25c7de6be06d9ac1e22939",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0089_0_89_493b_f210-360.mp4",
+      "exists": true,
+      "bytes": 2536766,
+      "sha256": "b638c20bcee0ce9d8425c7e5432f746bdd217fd825f5aa2864c209fd81d07342",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0094_0_94_514b_f78-228.mp4",
+      "exists": true,
+      "bytes": 5746640,
+      "sha256": "8c8e50184d8936b194a922c445eac33191c51c88d7b2f8655c97824ecbc4b7a8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0109_0_109_608b_f198-348.mp4",
+      "exists": true,
+      "bytes": 6439782,
+      "sha256": "58d758d0082a13326ca2de4ca2a1ed9f60f38bf337ef5f2e380b3d92d8732125",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0111_0_111_628b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8645363,
+      "sha256": "b4f3ade0ab6c41cd35794730e6709b1d4ca1db3c537bd55cee031be17c8192f1",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0112_0_112_631b_f86-236.mp4",
+      "exists": true,
+      "bytes": 3974234,
+      "sha256": "06ff65771fb35df86f812d764b529244d02569962836e7ae1620e3ed26b73479",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0114_0_114_646b_f150-300.mp4",
+      "exists": true,
+      "bytes": 4166332,
+      "sha256": "ee80420d7760dbfc48713a8c80ab406f1c8a210a28dc608cd8d4f9e8b0766163",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0122_0_122_718b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3236936,
+      "sha256": "afcdbcaa7dee0a863c8aa315d24b2e42d43c34a4ac94459dfe665d870b7e18f6",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0123_0_123_720b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5496365,
+      "sha256": "ffb4b9162382dab0bf53487cde28a3f889ff2b709de2ecf85a93d42660956a82",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0129_0_129_762b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3393985,
+      "sha256": "2cad56ba9d7aa222d55c80d7e2dc009cf27a8c8a199d7d5d6a783aebac06de5c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0130_0_130_770b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4295322,
+      "sha256": "678a7758eac84a6bfba77038a683f608f0a80c7c7963f14e7f846cdcd2811ac8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0131_0_131_774b_f74-224.mp4",
+      "exists": true,
+      "bytes": 8327844,
+      "sha256": "2f5d35c5fc1d8c3ed45516e19cd715f7172b2d44f95db54e86e08175bf386959",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0132_0_132_786b_f140-290.mp4",
+      "exists": true,
+      "bytes": 6199933,
+      "sha256": "38a1ab15ecae3a6405693347aa02f0f3e4fba2af5fab2cb603fbf68f12228284",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0134_0_134_793b_f294-444.mp4",
+      "exists": true,
+      "bytes": 3637847,
+      "sha256": "e8b533c4f3603b1e9c98b499957d16379d9e68e08c47509c9a73b43309615e8d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0138_0_138_859b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3679836,
+      "sha256": "e7003062b6b928737ef84a92a55fcd5317d2458d768d048e76686ca0393cc315",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0139_0_139_865b_f60-210.mp4",
+      "exists": true,
+      "bytes": 6593700,
+      "sha256": "f817e5a3ce1de0bbb7a6b80d31296117222cb28c2d566222a62509f728ab2745",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0140_0_140_868b_f97-247.mp4",
+      "exists": true,
+      "bytes": 3519087,
+      "sha256": "524bfc3a8441a4a417a375f34a0f1548634131632a45e6c831af50b571a6018f",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0147_0_147_949b_f89-239.mp4",
+      "exists": true,
+      "bytes": 4583111,
+      "sha256": "6ddb0ccb1a1e1a5640eae0f8d6d4593bdc17b10491cf45bcccd80ab7d5d73b38",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0149_0_149_960b_f150-300.mp4",
+      "exists": true,
+      "bytes": 4821148,
+      "sha256": "7f207aecdc195df4edab8f492d87d5f343528d2afc0014463561cf3342c1d3ad",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0154_0_154_1042b_f180-330.mp4",
+      "exists": true,
+      "bytes": 3500822,
+      "sha256": "783026ab2b0125acb63fa61a4dcc59c33da347809fae0e99cb70c6dfd2b77a3d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0156_0_156_1054b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8309149,
+      "sha256": "bb0c411a91b9720d5a157b8939c3b5d0c00d92407280deff2fe4d0329683b053",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0158_0_158_1071b_f30-180.mp4",
+      "exists": true,
+      "bytes": 9260785,
+      "sha256": "c791bc46e26e69f38772291728a2a45380e1ef1b309349142b2e29e617619641",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0160_0_160_1085b_f60-210.mp4",
+      "exists": true,
+      "bytes": 8723599,
+      "sha256": "211f657510f2c36df687c9474119513383d96aa3a1e048a02d5e805353a328e8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0161_0_161_1091b_f0-150.mp4",
+      "exists": true,
+      "bytes": 7180370,
+      "sha256": "12becdda1cc11d41c28409950caf8add2fcaf4e353717caa03d019b27b535e9a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0166_0_166_1145b_f60-210.mp4",
+      "exists": true,
+      "bytes": 5773871,
+      "sha256": "163eef85ccb348573373f4637e322eee627d2bffb1b2bcfefc95ca750a62984d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0167_0_167_1152b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4989266,
+      "sha256": "5ac2abb51ddd29a3ba75bd79f4d3bc522dda06c30adab695468e061b84e4be75",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0171_0_171_1201b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8730716,
+      "sha256": "768e50e3c1b098c1ae7ca1d064d24600dd9a7ff01f3cc1529062755faa71b2c3",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0172_0_172_1203b_f30-180.mp4",
+      "exists": true,
+      "bytes": 2838180,
+      "sha256": "cb13465a3056efc2d27d4d0121905d0a1aed9e5bfa1b7bc866d0279024a4934f",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0175_0_175_1237b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8471857,
+      "sha256": "0c824502675f0a0093777625e3f81356be43f3d9af67a0baecc3dcc75e9fff6b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0176_0_176_1250b_f150-300.mp4",
+      "exists": true,
+      "bytes": 2848290,
+      "sha256": "61644feeaf699f1e2cece831a8a00667f1c073220c52e0d73d09af26a8ecd175",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0185_0_185_1314b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4912385,
+      "sha256": "c82990278914bfd37d122034ae88ee62db9b17a3742567789caea83f4d36bb7a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0190_0_190_1365b_f179-329.mp4",
+      "exists": true,
+      "bytes": 3308765,
+      "sha256": "9d41b4f781f1fc2e2177e531076b9704235f43ad98a90321ce22bc6398affad5",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0191_0_191_1379b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8801900,
+      "sha256": "0513ef1f11f444d7fa1e8b778fc9a53af77a1d433cca208bd60c112cc0180da1",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0194_0_194_1428b_f390-540.mp4",
+      "exists": true,
+      "bytes": 7899989,
+      "sha256": "ed6742e6c8cd7535b58f5f4d173c5fc7a94de0c5610c84f642bf306d6674041f",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0196_0_196_1443b_f30-180.mp4",
+      "exists": true,
+      "bytes": 7721631,
+      "sha256": "3b4fd15ddc8cbffe41fccb92725b9a863627aca9cbe7a6e337ba2b3a50c45d90",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0204_0_204_1487b_f0-150.mp4",
+      "exists": true,
+      "bytes": 7233083,
+      "sha256": "61c412ceef266ca25dbc9c653f36dcf61c2909a4dd60c94bab52992eaf30af7b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0209_0_209_1508b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3022390,
+      "sha256": "d00abced5de8cdef2cb4a5b21fa5267357cde88d1deae225977714c22db9e0c2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0214_0_214_1563b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4156360,
+      "sha256": "353bd51ac0c32f415bd439999a8efb5c97b576405a93743b9ff7973007bd0e60",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0215_0_215_1572b_f76-226.mp4",
+      "exists": true,
+      "bytes": 7380359,
+      "sha256": "7d0650fa74f80cde7a2c11aa01277e2147674debf3700087e6bba847b2160879",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0218_0_218_1604b_f30-180.mp4",
+      "exists": true,
+      "bytes": 4580722,
+      "sha256": "e57746295bbd5f48926522ed29861492cea00b017d664d3db45d3ec6ff0ced79",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0219_0_219_1618b_f90-240.mp4",
+      "exists": true,
+      "bytes": 6527683,
+      "sha256": "55b9681b5ce0bc5e7791b287ed5218dd5e31341a7ba6e1137de8d2f3078acc6e",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0225_0_225_1690b_f60-210.mp4",
+      "exists": true,
+      "bytes": 3648320,
+      "sha256": "b609e4a5d3ea72683e5fce26bf9077da08b14496a82cbd48dbaf83fbeb8a9d68",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0226_0_226_1709b_f170-320.mp4",
+      "exists": true,
+      "bytes": 5256293,
+      "sha256": "f902b4ef3ed73fb228c888ccfe32d95be84b22ae642b9c3ae13e90359df1c113",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0227_0_227_1720b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5422685,
+      "sha256": "6c87360fd4e5a7c6aa174799ed39401883e42a2406f57da8f645aafcf6675584",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0228_0_228_1731b_f30-180.mp4",
+      "exists": true,
+      "bytes": 7138488,
+      "sha256": "eef18d34eff5eea121a20e837d17f71c2f096041869bf051e7fa8781444b0e56",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0229_0_229_1737b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5312134,
+      "sha256": "2afb7a33ae722bf4dd54067d9df9a023ab1359ae50f287304b8ecce4393dcde4",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0231_0_231_1761b_f120-270.mp4",
+      "exists": true,
+      "bytes": 5968281,
+      "sha256": "7734d82e8d488dabde03d983db6e4c52e1bc3dee03e1f13c3e500311bcf0d0e1",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0235_0_235_1807b_f90-240.mp4",
+      "exists": true,
+      "bytes": 2708555,
+      "sha256": "7441da0313eedfa67e6ba150a1c85303a6e6bfd2dad987ea1a89a829648eb4b2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0236_0_236_1824b_f60-210.mp4",
+      "exists": true,
+      "bytes": 5755062,
+      "sha256": "8e1c04b71a35e70bdb1c93591c9871c76bd4e683c8d562d6b50bb83be563d717",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0241_0_241_1860b_f0-150.mp4",
+      "exists": true,
+      "bytes": 7023602,
+      "sha256": "c0a28bda08c39958e5637288bb08e80d413cfc09e3cdb71b1d9487477afbd6d8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0242_0_242_1864b_f30-180.mp4",
+      "exists": true,
+      "bytes": 5989757,
+      "sha256": "683e4d10f76cb3b4af87408fd149b2bffd457efaf1599dc5427ab0ae1867b028",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0248_0_248_1910b_f30-180.mp4",
+      "exists": true,
+      "bytes": 5925881,
+      "sha256": "b298b9c413ec006eaf3d512f3e18c3b8be815fe155b350dd21341d4c812258b2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0257_0_257_1989b_f60-210.mp4",
+      "exists": true,
+      "bytes": 4073960,
+      "sha256": "12089eea15f6392451c582973693f1754deedfb8298e6c8e648d5525eeb29a50",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0258_0_258_1995b_f30-180.mp4",
+      "exists": true,
+      "bytes": 6226196,
+      "sha256": "9fddb6d3fa0078e399e0ca858be3302b523608c687218c2a77b95dad1c6e46b2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0259_0_259_2003b_f0-150.mp4",
+      "exists": true,
+      "bytes": 9695416,
+      "sha256": "fb5a9cdb9e3fe099554f494aa9e3869fea721b511339d4ba5622dc97c7b1a102",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0260_0_260_2012b_f60-210.mp4",
+      "exists": true,
+      "bytes": 3360381,
+      "sha256": "d288f8576d69d599e8efa99220cb8dab7c0802d613c106bf8a8b95a82950d43c",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0261_0_261_2018b_f0-150.mp4",
+      "exists": true,
+      "bytes": 6909685,
+      "sha256": "1e04f410ca962e0c92c9effaba3f5ab07c22443c5e8e196f60d4df5d972d0fed",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0264_0_264_2058b_f0-150.mp4",
+      "exists": true,
+      "bytes": 7880963,
+      "sha256": "be1715e7aefe7cdfa63cf676cb6edee6205b8b521a705f5b91b479a05c9860df",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0266_0_266_2087b_f210-360.mp4",
+      "exists": true,
+      "bytes": 6429051,
+      "sha256": "63dc2a76492a1ad27af9df2fc6fe3767478fee2fff064766da67edeac8978a20",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0268_0_268_2105b_f90-240.mp4",
+      "exists": true,
+      "bytes": 2631762,
+      "sha256": "0f77c8135b157814f6d9d3fca35006787a2c86eedd86b3d4383049331b9b9aaa",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0274_0_274_2161b_f120-270.mp4",
+      "exists": true,
+      "bytes": 6545851,
+      "sha256": "4efe45514295cbb79149b7f5f51b4221103ab43c071b1101a38d8decf796ed69",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0275_0_275_2173b_f0-150.mp4",
+      "exists": true,
+      "bytes": 6765089,
+      "sha256": "8521eca84abbe846f9165f962b13a136046ad9a5e732b1438a4c21afa2be5d84",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0276_0_276_2177b_f90-240.mp4",
+      "exists": true,
+      "bytes": 5251488,
+      "sha256": "508c6394f99302e2b52cfaa890fd9ac7cf677c72e4c4562037706c51b701ed14",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0281_0_281_2203b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4974530,
+      "sha256": "d290f0f71a60490e7a0127ce894da5daeb23a422bfefa23581b0e5be8e515093",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0286_0_286_2228b_f120-270.mp4",
+      "exists": true,
+      "bytes": 8766677,
+      "sha256": "e37040cdc40d086eb24a71571f78a37b7cca25873fc588776ce7b3d56203164a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0291_0_291_2257b_f60-210.mp4",
+      "exists": true,
+      "bytes": 6193670,
+      "sha256": "32005c461eaea747646aff7a14fd7b63cf358feddb3ea894a620373553176fa2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0291_0_291_2262b_f60-210.mp4",
+      "exists": true,
+      "bytes": 6193670,
+      "sha256": "32005c461eaea747646aff7a14fd7b63cf358feddb3ea894a620373553176fa2",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0293_0_293_2273b_f120-270.mp4",
+      "exists": true,
+      "bytes": 6467741,
+      "sha256": "f08ac4992e2ba53f9a83968b4b45631d90cd17d368c697b249cbdd5b77e0b6fb",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0293_0_293_2281b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8646395,
+      "sha256": "d30d1ef5d2c33258ce2a57140c136e71f3a578dc10b09345be3656113aa8248e",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0293_0_293_2284b_f120-270.mp4",
+      "exists": true,
+      "bytes": 6467741,
+      "sha256": "f08ac4992e2ba53f9a83968b4b45631d90cd17d368c697b249cbdd5b77e0b6fb",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0297_0_297_2297b_f164-314.mp4",
+      "exists": true,
+      "bytes": 4000279,
+      "sha256": "db0fa2a0dd0033bdb07b52bb5afb5a8ef0e5759ef3d7a761d371b2c021778b30",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0297_0_297_2299b_f188-338.mp4",
+      "exists": true,
+      "bytes": 3822200,
+      "sha256": "e28f3502ada6e4f2d327ab85372aff07324ee5272e34936d87752e11c7568bb4",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0297_0_297_2301b_f240-390.mp4",
+      "exists": true,
+      "bytes": 3654107,
+      "sha256": "e10ec17b18aa83af8cf1496e3c7c149033357b6aee8bd2e9001b97212855a2ef",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0297_0_297_2302b_f151-301.mp4",
+      "exists": true,
+      "bytes": 4010400,
+      "sha256": "e67f73911b7496caa00284df90f6f12e0c8ff861feae3c0ec93d2b7e83548022",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0297_0_297_2304b_f101-251.mp4",
+      "exists": true,
+      "bytes": 3774310,
+      "sha256": "b86dd9d3c230899dcb7e17b3b15f67d0f3335bdf3a1ef5a9d9e826bba0d49208",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0298_0_298_2306b_f120-270.mp4",
+      "exists": true,
+      "bytes": 3431109,
+      "sha256": "85ab6cc80a7641f76d6d3ee470e86abe194587b2743106d8fcc7173f754f7891",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0298_0_298_2311b_f120-270.mp4",
+      "exists": true,
+      "bytes": 3431109,
+      "sha256": "85ab6cc80a7641f76d6d3ee470e86abe194587b2743106d8fcc7173f754f7891",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0298_0_298_2315b_f120-270.mp4",
+      "exists": true,
+      "bytes": 3431109,
+      "sha256": "85ab6cc80a7641f76d6d3ee470e86abe194587b2743106d8fcc7173f754f7891",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0298_0_298_2318b_f120-270.mp4",
+      "exists": true,
+      "bytes": 3431109,
+      "sha256": "85ab6cc80a7641f76d6d3ee470e86abe194587b2743106d8fcc7173f754f7891",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0298_0_298_2319b_f120-270.mp4",
+      "exists": true,
+      "bytes": 3431109,
+      "sha256": "85ab6cc80a7641f76d6d3ee470e86abe194587b2743106d8fcc7173f754f7891",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0301_0_301_2333b_f60-210.mp4",
+      "exists": true,
+      "bytes": 5064569,
+      "sha256": "16c4a8d0d3e5ae8dfb183cf9f09c1bae85947aaf6f15318942883fcb090403ba",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0301_0_301_2338b_f60-210.mp4",
+      "exists": true,
+      "bytes": 5064569,
+      "sha256": "16c4a8d0d3e5ae8dfb183cf9f09c1bae85947aaf6f15318942883fcb090403ba",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0302_0_302_2344b_f30-180.mp4",
+      "exists": true,
+      "bytes": 4946251,
+      "sha256": "706119194d249e9135adefd2ebc4db0d2c2074342739086ff7249d74389fa819",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0302_0_302_2348b_f30-180.mp4",
+      "exists": true,
+      "bytes": 4946251,
+      "sha256": "706119194d249e9135adefd2ebc4db0d2c2074342739086ff7249d74389fa819",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0302_0_302_2352b_f30-180.mp4",
+      "exists": true,
+      "bytes": 4946251,
+      "sha256": "706119194d249e9135adefd2ebc4db0d2c2074342739086ff7249d74389fa819",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0303_0_303_2358b_f30-180.mp4",
+      "exists": true,
+      "bytes": 4156445,
+      "sha256": "dd869de8fa2340f9d9a1de233df779e868eeb1622d98e11f4ff9627d6c8c6c03",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0306_0_306_2385b_f90-240.mp4",
+      "exists": true,
+      "bytes": 3708548,
+      "sha256": "d1b1acbb6aba388930825e31311362ada550359b7e75cb82c374db4bbc14f6bb",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0310_0_310_2415b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4578269,
+      "sha256": "1c9acfd13d59aa3f75da0004f4b71fd664a7be4dd6081297ce23985a896d136d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0310_0_310_2419b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4578269,
+      "sha256": "1c9acfd13d59aa3f75da0004f4b71fd664a7be4dd6081297ce23985a896d136d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0310_0_310_2423b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4578269,
+      "sha256": "1c9acfd13d59aa3f75da0004f4b71fd664a7be4dd6081297ce23985a896d136d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0310_0_310_2424b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4578269,
+      "sha256": "1c9acfd13d59aa3f75da0004f4b71fd664a7be4dd6081297ce23985a896d136d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0311_0_311_2427b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5857294,
+      "sha256": "763392296255a0966259dd0ad25e9fd603e03334d1faa3b3e279f1300fba00f8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0311_0_311_2438b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5857294,
+      "sha256": "763392296255a0966259dd0ad25e9fd603e03334d1faa3b3e279f1300fba00f8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0311_0_311_2439b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5857294,
+      "sha256": "763392296255a0966259dd0ad25e9fd603e03334d1faa3b3e279f1300fba00f8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0311_0_311_2441b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5857294,
+      "sha256": "763392296255a0966259dd0ad25e9fd603e03334d1faa3b3e279f1300fba00f8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0311_0_311_2442b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5857294,
+      "sha256": "763392296255a0966259dd0ad25e9fd603e03334d1faa3b3e279f1300fba00f8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0315_0_315_2482b_f60-210.mp4",
+      "exists": true,
+      "bytes": 4901590,
+      "sha256": "d9e1377bd232d0186be6fc26b09a417967141ec3342e4a34c50be9c207038075",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0317_0_317_2497b_f120-270.mp4",
+      "exists": true,
+      "bytes": 6352081,
+      "sha256": "ee6255214557c3c81ae43b3fdbb4cc593c431710b00325f75b2a38019ef4c628",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0317_0_317_2499b_f120-270.mp4",
+      "exists": true,
+      "bytes": 6352081,
+      "sha256": "ee6255214557c3c81ae43b3fdbb4cc593c431710b00325f75b2a38019ef4c628",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0320_0_320_2515b_f30-180.mp4",
+      "exists": true,
+      "bytes": 3961593,
+      "sha256": "259a58eee88c1b62cc381cb7420312584b878f1b9aeabdb337d3ed5a8358e947",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0320_0_320_2516b_f30-180.mp4",
+      "exists": true,
+      "bytes": 3961593,
+      "sha256": "259a58eee88c1b62cc381cb7420312584b878f1b9aeabdb337d3ed5a8358e947",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0324_0_324_2559b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4084156,
+      "sha256": "6a682cf35456b8919937c86d0b0b57b7acdd23a73e36988e7c1a7593e353f1c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0324_0_324_2560b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4084156,
+      "sha256": "6a682cf35456b8919937c86d0b0b57b7acdd23a73e36988e7c1a7593e353f1c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0324_0_324_2561b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4084156,
+      "sha256": "6a682cf35456b8919937c86d0b0b57b7acdd23a73e36988e7c1a7593e353f1c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0324_0_324_2562b_f90-240.mp4",
+      "exists": true,
+      "bytes": 4084156,
+      "sha256": "6a682cf35456b8919937c86d0b0b57b7acdd23a73e36988e7c1a7593e353f1c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0325_0_325_2565b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5092058,
+      "sha256": "206a02f77c33e20495685da4bfbc03a9b3cdb6c23ac035e31e0bf0be80905e1b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0326_0_326_2566b_f30-180.mp4",
+      "exists": true,
+      "bytes": 6342747,
+      "sha256": "f2fe182265c381c80486a7a82cb89a40e8f335d45480ce616d2068e61b9a07f6",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0326_0_326_2571b_f30-180.mp4",
+      "exists": true,
+      "bytes": 6342747,
+      "sha256": "f2fe182265c381c80486a7a82cb89a40e8f335d45480ce616d2068e61b9a07f6",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0331_0_331_2596b_f100-250.mp4",
+      "exists": true,
+      "bytes": 2498102,
+      "sha256": "0d923eb11c5ac9feffb94949b845847f4ca161c056fb390cc755ef69317722bb",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0331_0_331_2597b_f131-281.mp4",
+      "exists": true,
+      "bytes": 2721735,
+      "sha256": "f559ab01caa97d897b853b9307f9fc078ded3fbd97fa366d88eb094dfa01d429",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0331_0_331_2603b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3007301,
+      "sha256": "8821ea5ae07c985e160e31e32e0a0277ca216b72abc76eb9f5e7b43ed7745846",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0331_0_331_2605b_f150-300.mp4",
+      "exists": true,
+      "bytes": 2872465,
+      "sha256": "2c5b7b8f94c31e6da1e4ec7a87fd03f6daa00578f3643c486cd56f381c595cd8",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0331_0_331_2606b_f0-150.mp4",
+      "exists": true,
+      "bytes": 3007301,
+      "sha256": "8821ea5ae07c985e160e31e32e0a0277ca216b72abc76eb9f5e7b43ed7745846",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0335_0_335_2624b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4210984,
+      "sha256": "0bff5def2fed407bcafbf21a2759eae27448540d65a8ba79327c6ec3c0cd597d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0340_0_340_2656b_f0-150.mp4",
+      "exists": true,
+      "bytes": 6855025,
+      "sha256": "9bd7e9d2ce8dd946acd0686d1b7b86bfe8f1675cafd0d583c215f05e8f82019a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0345_0_345_2700b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8318045,
+      "sha256": "e6df4fc1c4549bc6db564f72139462bc5bbe2a987bb5b9b9e0afcf2b85b42f8b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0345_0_345_2701b_f0-150.mp4",
+      "exists": true,
+      "bytes": 8318045,
+      "sha256": "e6df4fc1c4549bc6db564f72139462bc5bbe2a987bb5b9b9e0afcf2b85b42f8b",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0002_0_2_6b_f60-210.mp4",
+      "exists": true,
+      "bytes": 790517,
+      "sha256": "f1cb754a284d70098579e96edc720bd1f30f0eb3a4eca5451e8408ff3011cb17",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0002_0_2_6b_f60-210.mp4",
+      "exists": true,
+      "bytes": 2885604,
+      "sha256": "7833cb3c04654b4c26c71874a667ddefb987174271eb5e0a9da627aff88d0692",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0003_0_3_7b_f0-150.mp4",
+      "exists": true,
+      "bytes": 975384,
+      "sha256": "d526dff58e33a09fcfb711255bfad017b13eb2eee5b235ab62588287a3511778",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0003_0_3_7b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2907238,
+      "sha256": "25898d0f4aea8927b08c5f3ab3dad87686c6d8397d4fefede3ae61480c4ea0c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0016_0_16_72b_f0-150.mp4",
+      "exists": true,
+      "bytes": 736026,
+      "sha256": "e8ae1336336a41eff5cf226ea62b52405e0f679c65b2ef61cfa6e7df4c3b401e",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0016_0_16_72b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2440678,
+      "sha256": "97f78ef33e4c5034cb8cd232c7650f02d70764223c61546456fd92132797582f",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0020_0_20_86b_f381-531.mp4",
+      "exists": true,
+      "bytes": 664614,
+      "sha256": "971d70f84cc85295b8fc0fdeda2fff6705bfce038d96f90bafd1d4f0790b1570",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0020_0_20_86b_f381-531.mp4",
+      "exists": true,
+      "bytes": 2529697,
+      "sha256": "aa496b4f53f7514c58553cba9dbd5e62ce8abef05d4bd546cf528e3441cac16a",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0024_0_24_99b_f60-210.mp4",
+      "exists": true,
+      "bytes": 1051232,
+      "sha256": "50274bff1f6b6702ce8d1c51d679888620e6a647ad12ce04a073ce50ee7518c0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0024_0_24_99b_f60-210.mp4",
+      "exists": true,
+      "bytes": 3215804,
+      "sha256": "56fabaabe58eb888f77cde615d7f073e392d5e1e0e20656581b96c520af61c91",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0027_0_27_119b_f0-150.mp4",
+      "exists": true,
+      "bytes": 688500,
+      "sha256": "cd0ba3cb409ddbf9fed40a15c373782061a62cc51cb48261ffccd470aeffab24",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0027_0_27_119b_f0-150.mp4",
+      "exists": true,
+      "bytes": 2414866,
+      "sha256": "c715b69e13f8c34060270d5b7224fbb894b7c40e521d6c2f633b4a8312e311a9",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0030_0_30_134b_f0-150.mp4",
+      "exists": true,
+      "bytes": 1235464,
+      "sha256": "984a94b7f7d289f006b36d8ea7b0a51d989cb3a15f4e08daa0f5b910422a2261",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0030_0_30_134b_f0-150.mp4",
+      "exists": true,
+      "bytes": 4392254,
+      "sha256": "52652e7b09094f4f6bcf4c996658c1502f463e7fac012df8a6676700820ed631",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0035_0_35_163b_f0-150.mp4",
+      "exists": true,
+      "bytes": 1396433,
+      "sha256": "d04c7074f64ba41ea7b3f91378806d7c0ce6f00d438a5295cde07f8abbde7575",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0035_0_35_163b_f0-150.mp4",
+      "exists": true,
+      "bytes": 5022406,
+      "sha256": "a0a9237a2b51a8813d150d8d3aa3845b313d1727e7eedceb771631f8ecb1e37d",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0037_0_37_168b_f0-150.mp4",
+      "exists": true,
+      "bytes": 1597925,
+      "sha256": "4625e749921d565eb5391637bef8bd98817ece5b84f83aea073868f4d06d4d93",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0037_0_37_168b_f0-150.mp4",
+      "exists": true,
+      "bytes": 6654595,
+      "sha256": "be5a99744cdd8ef8b6f65347527762bbbe55e2e98b68ab2e2a38e1312e3383d0",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/generated_video/video_0044_0_44_202b_f60-210.mp4",
+      "exists": true,
+      "bytes": 471299,
+      "sha256": "5fe6a480f2b0f88b377060b5faa08c02c92f3f9046e8ac325def7cdff7eb8ea9",
+      "included_in_e3_followup_zip": false
+    },
+    {
+      "path": "repos/SynPeDAS/JAAD_crossing_moments/video_0044_0_44_202b_f60-210.mp4",
+      "exists": true,
+      "bytes": 1679422,
+      "sha256": "d605fb7330d24c350d88882b054e86c83955fdb7636e3d77a5c4d4537ff52840",
+      "included_in_e3_followup_zip": false
+    }
+  ],
+  "pending_human_truth": [
+    {
+      "path": "datasets/annotations/e1_manual_labels.csv",
+      "exists": true,
+      "bytes": 1168,
+      "sha256": "36b6ca7564a12980b2e0c1ca890b1759b9d05bd1469d68ade38039f18b1acb16",
+      "included_in_e3_followup_zip": true
+    }
+  ]
+}

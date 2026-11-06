@@ -1,0 +1,22 @@
+E3 stage selftest
+run at: 2026-11-06T18:23:28
+
+D0-1_cosine_basics: PASS — same->1, orthogonal->0, zero-vectors->1
+D0-2_constant_prediction_collapses: PASS — constant pred: delta_dir=0.183 > 0, R_delta=0.00e+00 ~ 0
+D0-3_identical_sequences: PASS — delta_dir=0.0e+00, R_delta=1.000000
+D0-4_partial_collapse: PASS — pred spread 0.15 vs true 0.8: R_delta=0.188 in (0,1), delta_dir=0.099 > 0
+D0-5_insufficient_timesteps: PASS — single timestep raises InsufficientTimesteps
+D0-6_verdict_rule_preregistered: PASS — supported=temporal_oversmoothing_supported, borderline=borderline, none=no_evidence
+D0-7_bootstrap_deterministic: PASS — same seed -> identical CI (-0.0739852843699571, -0.0739852843699571)
+A-1_walk_stop_resume: PASS — segments=['UNKNOWN', 'CROSSING', 'STOPPED', 'RESUMING', 'CROSSING'], stop_events=1, resume_events=1
+A-2_stationary_from_start: PASS — segments=['UNKNOWN', 'WAITING'] (no CROSSING/STOPPED/RESUMING)
+A-3_jitter_no_flapping: PASS — alternating 0.004/0.0005 speeds -> no motion state; segments=['UNKNOWN']
+A-4_gap_yields_unknown: PASS — 10-frame gap -> UNKNOWN around the gap, CROSSING re-established
+A-5_real_tracks_smoke: PASS — 10 real person tracks analyzed; states/segments valid
+A-6_cli_contract: PASS — CLI exit=0, files=True, per_frame rows=5156, image_plane declaration present
+A-7_reestablish_is_sustained: PASS — post-gap phases=['UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'UNKNOWN', 'CROSSING', 'CROSSING', 'CROSSING', 'CROSSING', 'CROSSING']; 10 usable observations required
+D0-8_cluster_bootstrap: PASS — correlated pairs resampled by JAAD source: cluster_bootstrap_by_jaad_video, 12 clusters
+D0-9_crop_controls_deterministic: PASS — stable crop averages neighbours; jitter is seeded, valid, target-only
+D0-10_delta_shuffle_is_not_reversal: PASS — deterministic non-reversal order control: [0.85, 0.65, 0.6, 0.7, 0.75, 0.55, 0.8, 0.5]
+
+SUMMARY: 17/17 PASS

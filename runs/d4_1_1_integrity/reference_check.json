@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "checked_split": "val",
+  "note": "Reference values are an external independent recomputation, used ONLY as regression assertions; never emitted as evaluation output.",
+  "checks": [
+    {
+      "name": "val_candidate_rows",
+      "kind": "count",
+      "method": null,
+      "source": null,
+      "expected": 588,
+      "actual": 588,
+      "pass": true
+    },
+    {
+      "name": "val_anchors",
+      "kind": "count",
+      "method": null,
+      "source": null,
+      "expected": 60,
+      "actual": 60,
+      "pass": true
+    },
+    {
+      "name": "val_sources",
+      "kind": "count",
+      "method": null,
+      "source": null,
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "name": "video_0310_anchors",
+      "kind": "count",
+      "method": null,
+      "source": null,
+      "expected": 23,
+      "actual": 23,
+      "pass": true
+    },
+    {
+      "name": "video_0310_kin_correct",
+      "kind": "source",
+      "method": "kin",
+      "source": "video_0310",
+      "expected": 12,
+      "actual": 12,
+      "pass": true
+    },
+    {
+      "name": "video_0310_kin_static_correct",
+      "kind": "source",
+      "method": "kin_static",
+      "source": "video_0310",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "name": "video_0310_kin_b4_correct",
+      "kind": "source",
+      "method": "kin_b4",
+      "source": "video_0310",
+      "expected": 15,
+      "actual": 15,
+      "pass": true
+    },
+    {
+      "name": "video_0310_kin_d4_correct",
+      "kind": "source",
+      "method": "kin_d4",
+      "source": "video_0310",
+      "expected": 14,
+      "actual": 14,
+      "pass": true
+    },
+    {
+      "name": "val_top1_kin",
+      "kind": "top1",
+      "method": "kin",
+      "source": null,
+      "expected": 39,
+      "actual": 39,
+      "pass": true
+    },
+    {
+      "name": "val_top1_kin_static",
+      "kind": "top1",
+      "method": "kin_static",
+      "source": null,
+      "expected": 39,
+      "actual": 39,
+      "pass": true
+    },
+    {
+      "name": "val_top1_kin_b4",
+      "kind": "top1",
+      "method": "kin_b4",
+      "source": null,
+      "expected": 38,
+      "actual": 38,
+      "pass": true
+    },
+    {
+      "name": "val_top1_kin_d4",
+      "kind": "top1",
+      "method": "kin_d4",
+      "source": null,
+      "expected": 42,
+      "actual": 42,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_wrong",
+      "kind": "coverage",
+      "method": "kin",
+      "source": null,
+      "expected": 8,
+      "actual": 8,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_static_wrong",
+      "kind": "coverage",
+      "method": "kin_static",
+      "source": null,
+      "expected": 7,
+      "actual": 7,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_d4_wrong",
+      "kind": "coverage",
+      "method": "kin_d4",
+      "source": null,
+      "expected": 9,
+      "actual": 9,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_accepted",
+      "kind": "coverage",
+      "method": "kin",
+      "source": null,
+      "expected": 30,
+      "actual": 30,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_static_accepted",
+      "kind": "coverage",
+      "method": "kin_static",
+      "source": null,
+      "expected": 30,
+      "actual": 30,
+      "pass": true
+    },
+    {
+      "name": "val_coverage50_kin_d4_accepted",
+      "kind": "coverage",
+      "method": "kin_d4",
+      "source": null,
+      "expected": 30,
+      "actual": 30,
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,3519 @@
+{
+  "definition": {
+    "unit": "anchor decisions (never candidate rows)",
+    "confidence": "the method's own Top-1 score (higher = more confident)",
+    "tie_break": "anchor key (split, source, numeric anchor_id) ascending",
+    "accepted_rule": "round-half-up(coverage * n_anchors); the denominator is the anchor count, never the candidate count",
+    "fixed_coverage": 0.5
+  },
+  "splits": {
+    "exploratory_test": {
+      "kin": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 44,
+          "accepted_wrong": 6,
+          "wrong_among_accepted": 6,
+          "wrong_among_accepted_fraction": 0.12,
+          "top1_accuracy": 0.79,
+          "boundary_tie": true
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 19,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.05,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 29,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.033333,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 37,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.075,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 44,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.12,
+            "top1_accuracy": 0.79,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 54,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.1,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 60,
+            "accepted_wrong": 10,
+            "wrong_among_accepted": 10,
+            "wrong_among_accepted_fraction": 0.142857,
+            "top1_accuracy": 0.79,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 67,
+            "accepted_wrong": 13,
+            "wrong_among_accepted": 13,
+            "wrong_among_accepted_fraction": 0.1625,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 72,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.2,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 79,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.21,
+            "top1_accuracy": 0.79,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 35,
+          "accepted_wrong": 15,
+          "wrong_among_accepted": 15,
+          "wrong_among_accepted_fraction": 0.3,
+          "top1_accuracy": 0.6,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 4,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.6,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 12,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 21,
+            "accepted_wrong": 9,
+            "wrong_among_accepted": 9,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 30,
+            "accepted_wrong": 10,
+            "wrong_among_accepted": 10,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 35,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 40,
+            "accepted_wrong": 20,
+            "wrong_among_accepted": 20,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 47,
+            "accepted_wrong": 23,
+            "wrong_among_accepted": 23,
+            "wrong_among_accepted_fraction": 0.328571,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 54,
+            "accepted_wrong": 26,
+            "wrong_among_accepted": 26,
+            "wrong_among_accepted_fraction": 0.325,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 57,
+            "accepted_wrong": 33,
+            "wrong_among_accepted": 33,
+            "wrong_among_accepted_fraction": 0.366667,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 60,
+            "accepted_wrong": 40,
+            "wrong_among_accepted": 40,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.6,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 36,
+          "accepted_wrong": 14,
+          "wrong_among_accepted": 14,
+          "wrong_among_accepted_fraction": 0.28,
+          "top1_accuracy": 0.69,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 4,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.6,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 14,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 22,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.266667,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 28,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 36,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.28,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 46,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.233333,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 55,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.214286,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 63,
+            "accepted_wrong": 17,
+            "wrong_among_accepted": 17,
+            "wrong_among_accepted_fraction": 0.2125,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 66,
+            "accepted_wrong": 24,
+            "wrong_among_accepted": 24,
+            "wrong_among_accepted_fraction": 0.266667,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 69,
+            "accepted_wrong": 31,
+            "wrong_among_accepted": 31,
+            "wrong_among_accepted_fraction": 0.31,
+            "top1_accuracy": 0.69,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 32,
+          "accepted_wrong": 18,
+          "wrong_among_accepted": 18,
+          "wrong_among_accepted_fraction": 0.36,
+          "top1_accuracy": 0.55,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 7,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 13,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.35,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 20,
+            "accepted_wrong": 10,
+            "wrong_among_accepted": 10,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 28,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 32,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.36,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 38,
+            "accepted_wrong": 22,
+            "wrong_among_accepted": 22,
+            "wrong_among_accepted_fraction": 0.366667,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 43,
+            "accepted_wrong": 27,
+            "wrong_among_accepted": 27,
+            "wrong_among_accepted_fraction": 0.385714,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 49,
+            "accepted_wrong": 31,
+            "wrong_among_accepted": 31,
+            "wrong_among_accepted_fraction": 0.3875,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 52,
+            "accepted_wrong": 38,
+            "wrong_among_accepted": 38,
+            "wrong_among_accepted_fraction": 0.422222,
+            "top1_accuracy": 0.55,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 55,
+            "accepted_wrong": 45,
+            "wrong_among_accepted": 45,
+            "wrong_among_accepted_fraction": 0.45,
+            "top1_accuracy": 0.55,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 41,
+          "accepted_wrong": 9,
+          "wrong_among_accepted": 9,
+          "wrong_among_accepted_fraction": 0.18,
+          "top1_accuracy": 0.71,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 9,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.1,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 16,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.2,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 25,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 34,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.15,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 41,
+            "accepted_wrong": 9,
+            "wrong_among_accepted": 9,
+            "wrong_among_accepted_fraction": 0.18,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 48,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.2,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 54,
+            "accepted_wrong": 16,
+            "wrong_among_accepted": 16,
+            "wrong_among_accepted_fraction": 0.228571,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 59,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.2625,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 66,
+            "accepted_wrong": 24,
+            "wrong_among_accepted": 24,
+            "wrong_among_accepted_fraction": 0.266667,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 71,
+            "accepted_wrong": 29,
+            "wrong_among_accepted": 29,
+            "wrong_among_accepted_fraction": 0.29,
+            "top1_accuracy": 0.71,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 32,
+          "accepted_wrong": 18,
+          "wrong_among_accepted": 18,
+          "wrong_among_accepted_fraction": 0.36,
+          "top1_accuracy": 0.56,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 7,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 12,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 19,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.366667,
+            "top1_accuracy": 0.56,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 25,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.56,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 32,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.36,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 37,
+            "accepted_wrong": 23,
+            "wrong_among_accepted": 23,
+            "wrong_among_accepted_fraction": 0.383333,
+            "top1_accuracy": 0.56,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 43,
+            "accepted_wrong": 27,
+            "wrong_among_accepted": 27,
+            "wrong_among_accepted_fraction": 0.385714,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 49,
+            "accepted_wrong": 31,
+            "wrong_among_accepted": 31,
+            "wrong_among_accepted_fraction": 0.3875,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 52,
+            "accepted_wrong": 38,
+            "wrong_among_accepted": 38,
+            "wrong_among_accepted_fraction": 0.422222,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 56,
+            "accepted_wrong": 44,
+            "wrong_among_accepted": 44,
+            "wrong_among_accepted_fraction": 0.44,
+            "top1_accuracy": 0.56,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 100,
+          "accepted": 50,
+          "accepted_correct": 38,
+          "accepted_wrong": 12,
+          "wrong_among_accepted": 12,
+          "wrong_among_accepted_fraction": 0.24,
+          "top1_accuracy": 0.76,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 100,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 100,
+            "accepted": 20,
+            "accepted_correct": 17,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.15,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 100,
+            "accepted": 30,
+            "accepted_correct": 25,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 100,
+            "accepted": 40,
+            "accepted_correct": 29,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.275,
+            "top1_accuracy": 0.76,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 100,
+            "accepted": 50,
+            "accepted_correct": 38,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.24,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 100,
+            "accepted": 60,
+            "accepted_correct": 46,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.233333,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 100,
+            "accepted": 70,
+            "accepted_correct": 55,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.214286,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 100,
+            "accepted": 80,
+            "accepted_correct": 64,
+            "accepted_wrong": 16,
+            "wrong_among_accepted": 16,
+            "wrong_among_accepted_fraction": 0.2,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 100,
+            "accepted": 90,
+            "accepted_correct": 70,
+            "accepted_wrong": 20,
+            "wrong_among_accepted": 20,
+            "wrong_among_accepted_fraction": 0.222222,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 100,
+            "accepted": 100,
+            "accepted_correct": 76,
+            "accepted_wrong": 24,
+            "wrong_among_accepted": 24,
+            "wrong_among_accepted_fraction": 0.24,
+            "top1_accuracy": 0.76,
+            "boundary_tie": false
+          }
+        ]
+      }
+    },
+    "final_test": {
+      "kin": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 12,
+          "accepted": 6,
+          "accepted_correct": 6,
+          "accepted_wrong": 0,
+          "wrong_among_accepted": 0,
+          "wrong_among_accepted_fraction": 0.0,
+          "top1_accuracy": 1.0,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 12,
+            "accepted": 1,
+            "accepted_correct": 1,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 12,
+            "accepted": 2,
+            "accepted_correct": 2,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 12,
+            "accepted": 4,
+            "accepted_correct": 4,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 12,
+            "accepted": 5,
+            "accepted_correct": 5,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 12,
+            "accepted": 6,
+            "accepted_correct": 6,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 12,
+            "accepted": 7,
+            "accepted_correct": 7,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 12,
+            "accepted": 8,
+            "accepted_correct": 8,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 12,
+            "accepted": 10,
+            "accepted_correct": 10,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 12,
+            "accepted": 11,
+            "accepted_correct": 11,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 12,
+            "accepted": 12,
+            "accepted_correct": 12,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 1.0,
+            "boundary_tie": false
+          }
+        ]
+      }
+    },
+    "train": {
+      "kin": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 102,
+          "accepted_wrong": 18,
+          "wrong_among_accepted": 18,
+          "wrong_among_accepted_fraction": 0.15,
+          "top1_accuracy": 0.791667,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 23,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 45,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.0625,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 66,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 80,
+            "accepted_wrong": 16,
+            "wrong_among_accepted": 16,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 102,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.15,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 123,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.145833,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 140,
+            "accepted_wrong": 28,
+            "wrong_among_accepted": 28,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 157,
+            "accepted_wrong": 35,
+            "wrong_among_accepted": 35,
+            "wrong_among_accepted_fraction": 0.182292,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 175,
+            "accepted_wrong": 41,
+            "wrong_among_accepted": 41,
+            "wrong_among_accepted_fraction": 0.189815,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 190,
+            "accepted_wrong": 50,
+            "wrong_among_accepted": 50,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.791667,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 89,
+          "accepted_wrong": 31,
+          "wrong_among_accepted": 31,
+          "wrong_among_accepted_fraction": 0.258333,
+          "top1_accuracy": 0.625,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 21,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.125,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 41,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.145833,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 61,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.152778,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 75,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.21875,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 89,
+            "accepted_wrong": 31,
+            "wrong_among_accepted": 31,
+            "wrong_among_accepted_fraction": 0.258333,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 102,
+            "accepted_wrong": 42,
+            "wrong_among_accepted": 42,
+            "wrong_among_accepted_fraction": 0.291667,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 118,
+            "accepted_wrong": 50,
+            "wrong_among_accepted": 50,
+            "wrong_among_accepted_fraction": 0.297619,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 133,
+            "accepted_wrong": 59,
+            "wrong_among_accepted": 59,
+            "wrong_among_accepted_fraction": 0.307292,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 144,
+            "accepted_wrong": 72,
+            "wrong_among_accepted": 72,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 150,
+            "accepted_wrong": 90,
+            "wrong_among_accepted": 90,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.625,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 95,
+          "accepted_wrong": 25,
+          "wrong_among_accepted": 25,
+          "wrong_among_accepted_fraction": 0.208333,
+          "top1_accuracy": 0.716667,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 23,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 45,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.0625,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 66,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 78,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.1875,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 95,
+            "accepted_wrong": 25,
+            "wrong_among_accepted": 25,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 114,
+            "accepted_wrong": 30,
+            "wrong_among_accepted": 30,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 131,
+            "accepted_wrong": 37,
+            "wrong_among_accepted": 37,
+            "wrong_among_accepted_fraction": 0.220238,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 148,
+            "accepted_wrong": 44,
+            "wrong_among_accepted": 44,
+            "wrong_among_accepted_fraction": 0.229167,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 162,
+            "accepted_wrong": 54,
+            "wrong_among_accepted": 54,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 172,
+            "accepted_wrong": 68,
+            "wrong_among_accepted": 68,
+            "wrong_among_accepted_fraction": 0.283333,
+            "top1_accuracy": 0.716667,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 95,
+          "accepted_wrong": 25,
+          "wrong_among_accepted": 25,
+          "wrong_among_accepted_fraction": 0.208333,
+          "top1_accuracy": 0.679167,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 22,
+            "accepted_wrong": 2,
+            "wrong_among_accepted": 2,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 39,
+            "accepted_wrong": 9,
+            "wrong_among_accepted": 9,
+            "wrong_among_accepted_fraction": 0.1875,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 59,
+            "accepted_wrong": 13,
+            "wrong_among_accepted": 13,
+            "wrong_among_accepted_fraction": 0.180556,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 78,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.1875,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 95,
+            "accepted_wrong": 25,
+            "wrong_among_accepted": 25,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 114,
+            "accepted_wrong": 30,
+            "wrong_among_accepted": 30,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 131,
+            "accepted_wrong": 37,
+            "wrong_among_accepted": 37,
+            "wrong_among_accepted_fraction": 0.220238,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 145,
+            "accepted_wrong": 47,
+            "wrong_among_accepted": 47,
+            "wrong_among_accepted_fraction": 0.244792,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 158,
+            "accepted_wrong": 58,
+            "wrong_among_accepted": 58,
+            "wrong_among_accepted_fraction": 0.268519,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 163,
+            "accepted_wrong": 77,
+            "wrong_among_accepted": 77,
+            "wrong_among_accepted_fraction": 0.320833,
+            "top1_accuracy": 0.679167,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 102,
+          "accepted_wrong": 18,
+          "wrong_among_accepted": 18,
+          "wrong_among_accepted_fraction": 0.15,
+          "top1_accuracy": 0.75,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 22,
+            "accepted_wrong": 2,
+            "wrong_among_accepted": 2,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 44,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 60,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 82,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.145833,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 102,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.15,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 119,
+            "accepted_wrong": 25,
+            "wrong_among_accepted": 25,
+            "wrong_among_accepted_fraction": 0.173611,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 137,
+            "accepted_wrong": 31,
+            "wrong_among_accepted": 31,
+            "wrong_among_accepted_fraction": 0.184524,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 154,
+            "accepted_wrong": 38,
+            "wrong_among_accepted": 38,
+            "wrong_among_accepted_fraction": 0.197917,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 170,
+            "accepted_wrong": 46,
+            "wrong_among_accepted": 46,
+            "wrong_among_accepted_fraction": 0.212963,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 180,
+            "accepted_wrong": 60,
+            "wrong_among_accepted": 60,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.75,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 116,
+          "accepted_wrong": 4,
+          "wrong_among_accepted": 4,
+          "wrong_among_accepted_fraction": 0.033333,
+          "top1_accuracy": 0.941667,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 23,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 47,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.020833,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 71,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.013889,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 93,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.03125,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 116,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.033333,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 139,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.034722,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 161,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 184,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 206,
+            "accepted_wrong": 10,
+            "wrong_among_accepted": 10,
+            "wrong_among_accepted_fraction": 0.046296,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 226,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.058333,
+            "top1_accuracy": 0.941667,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 240,
+          "accepted": 120,
+          "accepted_correct": 117,
+          "accepted_wrong": 3,
+          "wrong_among_accepted": 3,
+          "wrong_among_accepted_fraction": 0.025,
+          "top1_accuracy": 0.9375,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 240,
+            "accepted": 24,
+            "accepted_correct": 24,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 240,
+            "accepted": 48,
+            "accepted_correct": 48,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 240,
+            "accepted": 72,
+            "accepted_correct": 72,
+            "accepted_wrong": 0,
+            "wrong_among_accepted": 0,
+            "wrong_among_accepted_fraction": 0.0,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 240,
+            "accepted": 96,
+            "accepted_correct": 95,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.010417,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 240,
+            "accepted": 120,
+            "accepted_correct": 117,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.025,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 240,
+            "accepted": 144,
+            "accepted_correct": 139,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.034722,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 240,
+            "accepted": 168,
+            "accepted_correct": 162,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.035714,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 240,
+            "accepted": 192,
+            "accepted_correct": 184,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.041667,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 240,
+            "accepted": 216,
+            "accepted_correct": 204,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.055556,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 240,
+            "accepted": 240,
+            "accepted_correct": 225,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.0625,
+            "top1_accuracy": 0.9375,
+            "boundary_tie": false
+          }
+        ]
+      }
+    },
+    "val": {
+      "kin": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 22,
+          "accepted_wrong": 8,
+          "wrong_among_accepted": 8,
+          "wrong_among_accepted_fraction": 0.266667,
+          "top1_accuracy": 0.65,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 4,
+            "accepted_wrong": 2,
+            "wrong_among_accepted": 2,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 8,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 12,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 17,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.291667,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 22,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.266667,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 23,
+            "accepted_wrong": 13,
+            "wrong_among_accepted": 13,
+            "wrong_among_accepted_fraction": 0.361111,
+            "top1_accuracy": 0.65,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 25,
+            "accepted_wrong": 17,
+            "wrong_among_accepted": 17,
+            "wrong_among_accepted_fraction": 0.404762,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 30,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 35,
+            "accepted_wrong": 19,
+            "wrong_among_accepted": 19,
+            "wrong_among_accepted_fraction": 0.351852,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 39,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.35,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 22,
+          "accepted_wrong": 8,
+          "wrong_among_accepted": 8,
+          "wrong_among_accepted_fraction": 0.266667,
+          "top1_accuracy": 0.633333,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 4,
+            "accepted_wrong": 2,
+            "wrong_among_accepted": 2,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 9,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 14,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.222222,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 17,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.291667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 22,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.266667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 25,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.305556,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 27,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.357143,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 30,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 35,
+            "accepted_wrong": 19,
+            "wrong_among_accepted": 19,
+            "wrong_among_accepted_fraction": 0.351852,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 38,
+            "accepted_wrong": 22,
+            "wrong_among_accepted": 22,
+            "wrong_among_accepted_fraction": 0.366667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_static": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 23,
+          "accepted_wrong": 7,
+          "wrong_among_accepted": 7,
+          "wrong_among_accepted_fraction": 0.233333,
+          "top1_accuracy": 0.65,
+          "boundary_tie": true
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 4,
+            "accepted_wrong": 2,
+            "wrong_among_accepted": 2,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 9,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 14,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.222222,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 19,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 23,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.233333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 24,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 28,
+            "accepted_wrong": 14,
+            "wrong_among_accepted": 14,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 32,
+            "accepted_wrong": 16,
+            "wrong_among_accepted": 16,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 37,
+            "accepted_wrong": 17,
+            "wrong_among_accepted": 17,
+            "wrong_among_accepted_fraction": 0.314815,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 39,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.35,
+            "top1_accuracy": 0.65,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 18,
+          "accepted_wrong": 12,
+          "wrong_among_accepted": 12,
+          "wrong_among_accepted_fraction": 0.4,
+          "top1_accuracy": 0.516667,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 5,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 6,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.5,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 11,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.388889,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 16,
+            "accepted_wrong": 8,
+            "wrong_among_accepted": 8,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 18,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 20,
+            "accepted_wrong": 16,
+            "wrong_among_accepted": 16,
+            "wrong_among_accepted_fraction": 0.444444,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 24,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.428571,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 27,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.4375,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 29,
+            "accepted_wrong": 25,
+            "wrong_among_accepted": 25,
+            "wrong_among_accepted_fraction": 0.462963,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 31,
+            "accepted_wrong": 29,
+            "wrong_among_accepted": 29,
+            "wrong_among_accepted_fraction": 0.483333,
+            "top1_accuracy": 0.516667,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_b4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 18,
+          "accepted_wrong": 12,
+          "wrong_among_accepted": 12,
+          "wrong_among_accepted_fraction": 0.4,
+          "top1_accuracy": 0.633333,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 2,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.666667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 8,
+            "accepted_wrong": 4,
+            "wrong_among_accepted": 4,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 13,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.277778,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 17,
+            "accepted_wrong": 7,
+            "wrong_among_accepted": 7,
+            "wrong_among_accepted_fraction": 0.291667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 18,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 23,
+            "accepted_wrong": 13,
+            "wrong_among_accepted": 13,
+            "wrong_among_accepted_fraction": 0.361111,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 27,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.357143,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 30,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 33,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.388889,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 38,
+            "accepted_wrong": 22,
+            "wrong_among_accepted": 22,
+            "wrong_among_accepted_fraction": 0.366667,
+            "top1_accuracy": 0.633333,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 18,
+          "accepted_wrong": 12,
+          "wrong_among_accepted": 12,
+          "wrong_among_accepted_fraction": 0.4,
+          "top1_accuracy": 0.566667,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 3,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.5,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 9,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.25,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 12,
+            "accepted_wrong": 6,
+            "wrong_among_accepted": 6,
+            "wrong_among_accepted_fraction": 0.333333,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 15,
+            "accepted_wrong": 9,
+            "wrong_among_accepted": 9,
+            "wrong_among_accepted_fraction": 0.375,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 18,
+            "accepted_wrong": 12,
+            "wrong_among_accepted": 12,
+            "wrong_among_accepted_fraction": 0.4,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 19,
+            "accepted_wrong": 17,
+            "wrong_among_accepted": 17,
+            "wrong_among_accepted_fraction": 0.472222,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 22,
+            "accepted_wrong": 20,
+            "wrong_among_accepted": 20,
+            "wrong_among_accepted_fraction": 0.47619,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 27,
+            "accepted_wrong": 21,
+            "wrong_among_accepted": 21,
+            "wrong_among_accepted_fraction": 0.4375,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 31,
+            "accepted_wrong": 23,
+            "wrong_among_accepted": 23,
+            "wrong_among_accepted_fraction": 0.425926,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 34,
+            "accepted_wrong": 26,
+            "wrong_among_accepted": 26,
+            "wrong_among_accepted_fraction": 0.433333,
+            "top1_accuracy": 0.566667,
+            "boundary_tie": false
+          }
+        ]
+      },
+      "kin_d4": {
+        "coverage_0.5": {
+          "coverage": 0.5,
+          "n_anchors": 60,
+          "accepted": 30,
+          "accepted_correct": 21,
+          "accepted_wrong": 9,
+          "wrong_among_accepted": 9,
+          "wrong_among_accepted_fraction": 0.3,
+          "top1_accuracy": 0.7,
+          "boundary_tie": false
+        },
+        "curve": [
+          {
+            "coverage": 0.1,
+            "n_anchors": 60,
+            "accepted": 6,
+            "accepted_correct": 5,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.2,
+            "n_anchors": 60,
+            "accepted": 12,
+            "accepted_correct": 11,
+            "accepted_wrong": 1,
+            "wrong_among_accepted": 1,
+            "wrong_among_accepted_fraction": 0.083333,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.3,
+            "n_anchors": 60,
+            "accepted": 18,
+            "accepted_correct": 15,
+            "accepted_wrong": 3,
+            "wrong_among_accepted": 3,
+            "wrong_among_accepted_fraction": 0.166667,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.4,
+            "n_anchors": 60,
+            "accepted": 24,
+            "accepted_correct": 19,
+            "accepted_wrong": 5,
+            "wrong_among_accepted": 5,
+            "wrong_among_accepted_fraction": 0.208333,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.5,
+            "n_anchors": 60,
+            "accepted": 30,
+            "accepted_correct": 21,
+            "accepted_wrong": 9,
+            "wrong_among_accepted": 9,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.6,
+            "n_anchors": 60,
+            "accepted": 36,
+            "accepted_correct": 25,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.305556,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.7,
+            "n_anchors": 60,
+            "accepted": 42,
+            "accepted_correct": 31,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.261905,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.8,
+            "n_anchors": 60,
+            "accepted": 48,
+            "accepted_correct": 37,
+            "accepted_wrong": 11,
+            "wrong_among_accepted": 11,
+            "wrong_among_accepted_fraction": 0.229167,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          },
+          {
+            "coverage": 0.9,
+            "n_anchors": 60,
+            "accepted": 54,
+            "accepted_correct": 39,
+            "accepted_wrong": 15,
+            "wrong_among_accepted": 15,
+            "wrong_among_accepted_fraction": 0.277778,
+            "top1_accuracy": 0.7,
+            "boundary_tie": true
+          },
+          {
+            "coverage": 1.0,
+            "n_anchors": 60,
+            "accepted": 60,
+            "accepted_correct": 42,
+            "accepted_wrong": 18,
+            "wrong_among_accepted": 18,
+            "wrong_among_accepted_fraction": 0.3,
+            "top1_accuracy": 0.7,
+            "boundary_tie": false
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "run_id": "472f55797fc59c17c5141fd385ffad004132c764137f7a9b67bc70603e534ed4",
+  "code_version": {
+    "sha256": "17de51c1af5a91c522571e3e97c642975a9ff4442322ec216259644c2a020da9",
+    "file": "/home/moz/World-GS/src/run_d4_1_1_fixed_evaluator.py"
+  },
+  "input": {
+    "csv": "/home/moz/World-GS/runs/d4_1_reevaluation/audit_candidates.csv",
+    "sha256": "62af9a11a2a8f57c56b05d6b751c7f616cc50ff3b86705c45563c31145f0b53f",
+    "rows_loaded": 3513,
+    "rows_after_dedup": 3513
+  },
+  "config": {
+    "methods": [
+      "kin",
+      "static",
+      "kin_static",
+      "b4",
+      "kin_b4",
+      "d4",
+      "kin_d4"
+    ],
+    "method_formulas": {
+      "kin": "-kin",
+      "static": "static_cos",
+      "kin_static": "static_cos - kin",
+      "b4": "b4_cos",
+      "kin_b4": "b4_cos - kin",
+      "d4": "d4_cos",
+      "kin_d4": "d4_cos - kin"
+    },
+    "score_direction": "higher_is_better",
+    "tie_break": "numeric_aware_ped_ascending",
+    "nonfinite_policy": "effective_minus_inf",
+    "duplicate_policy": "conflicting_error_identical_collapse",
+    "fixed_coverage": 0.5,
+    "curve_coverages": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      1.0
+    ],
+    "loso_baselines": [
+      "kin",
+      "kin_static",
+      "kin_b4"
+    ],
+    "reference_check_mode": "on"
+  },
+  "config_sha256": "8f394ea6393e5793892e1c3f312e6a8885fc8f211a985ddd455bf08955e0949a",
+  "reference_check": {
+    "mode": "on",
+    "status": "PASS"
+  },
+  "argv": [],
+  "started_at": "2026-11-06T17:06:30",
+  "status": "completed",
+  "finished_at": "2026-11-06T17:06:31",
+  "exit_code": 0
+}

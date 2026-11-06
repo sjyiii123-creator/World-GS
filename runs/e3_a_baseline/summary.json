@@ -1,0 +1,31 @@
+{
+  "code_sha256": "45876b1e69963df9a5a468fd5e83fc7a7819d20bc934a774b01ca5405ff77afd",
+  "tracks_root": "/home/moz/World-GS/runs/synpedas_smoke_v2",
+  "generated_at": "2026-11-06T16:34:56",
+  "config": {
+    "v_stop": 0.0015,
+    "v_move": 0.003,
+    "n_stop": 5,
+    "n_move": 5,
+    "warmup": 3,
+    "gap_tolerance": 4,
+    "reestablish": 3,
+    "resume_window": 6,
+    "smooth_window": 3,
+    "observation_level": "image_plane"
+  },
+  "n_videos": 20,
+  "n_tracks_total": 460,
+  "n_person_tracks": 87,
+  "n_person_tracks_used": 87,
+  "n_per_frame_rows": 5156,
+  "states": [
+    "UNKNOWN",
+    "WAITING",
+    "CROSSING",
+    "STOPPED",
+    "RESUMING"
+  ],
+  "declaration": "image-plane observation-level event evidence only; ego-motion / camera-geometry NOT compensated",
+  "label_acceptance": "research conclusions gated on e1_manual_labels.csv human ground truth (currently pending)"
+}

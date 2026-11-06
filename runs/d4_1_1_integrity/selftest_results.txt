@@ -1,0 +1,17 @@
+D4.1.1 evaluator selftest
+run at: 2026-11-06T14:58:46
+evaluator code sha256: 17de51c1af5a
+
+T1_two_anchors_same_source: PASS — kin picks p1/p3 (both true), static independently picks p2/p4 (both false); 2 decisions for 2 anchors, no mixing
+T2_same_anchor_id_different_sources: PASS — v1/a1 -> pB, v2/a1 -> q1; the global best (pB, kin=0.1) is not leaked into v2's group; 2 groups
+T3_score_directions: PASS — kin: smaller distance wins; cos: larger wins; joint cos - kin: 0.80-0.20 beats 0.85-0.50, but pure cos flips
+T4_duplicate_candidates: PASS — conflicting duplicate key raises DuplicateCandidateError=True; identical duplicate collapses to 1 row (correct count not inflated)
+T5_source_stats_bound: PASS — v1: 3 anchors, kin_correct=2 (<= 3); a fabricated correct=4 > 3 raises InvariantViolation
+T6_fixed_coverage: PASS — 60 anchors x 4 candidates (240 rows) @ 0.5 -> accepted=30 DISTINCT anchors (a row-based implementation would accept 120); wrong_among_accepted=12, accepted_correct=18
+T7_row_order_invariance: PASS — 72 rows / 18 anchors x 7 methods; original vs seeded-shuffle results identical: True
+T8_seven_method_isolation: PASS — winners {'kin': 'c1', 'static': 'c2', 'kin_static': 'c3', 'b4': 'c4', 'kin_b4': 'c5', 'd4': 'c6', 'kin_d4': 'c7'}; only kin_d4 is correct -> the seven results provably come from seven different scorings, not one dict copied into seven names
+T9_run_discipline_guard: PASS — CLI run 1 exit=0, re-run exit=4 (guard refused: True); required files present=True; per-anchor rows=28 (4 anchors x 7 methods); coverage@0.5 accepted=2 of 4 anchors in risk_coverage.json (a row-based implementation would report 6): True
+T10_reference_mismatch_release_gate: PASS — exit=3; manifest=reference_mismatch (ref check FAIL); formal files published=False; diagnostics kept: reference_check.json, reference_mismatch_details.json, invariant_checks.json, run log, manifest
+T11_run_id_experiment_identity: PASS — same (code,input,config) re-run refused (exit=4); changed input in same dir refused as DIFFERENT experiment (exit=4); changed input in fresh dir ran as a new experiment (exit=0), run_id 49d4bb6f.. != 7e0c0450..; manifest records code/input/config/reference-check/start/end/status: True; cross-dir registry upsert/lookup semantics: True
+
+SUMMARY: 11/11 PASS
